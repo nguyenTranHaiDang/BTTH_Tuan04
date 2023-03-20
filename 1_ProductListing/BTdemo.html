@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #menu-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #left {
+        display: flex;
+        width: 250px;
+        justify-content: space-around;
+    }   
+       
+    .leftitem {
+        color: #686E77;
+        font-size: 15px;
+    }
+
+    #center {
+        margin-top: 10px;
+        justify-content: space-around;
+       
+    }
+   
+        
+    #right {
+        display: flex;
+        width: 350px;
+        justify-content: space-around;
+    } 
+    .rightitem{
+        color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        height: 32px;
+        width: 400px;
+        border: 1px solid #d7d9dd;
+        border-radius: 6px;
+        justify-content: space-around;
+        align-items: center;
+        color: #b0b1b2;
+        font-size: 13px ;
+        text-align: center;
+    }
+    #background {
+        background-image: url(Image\ 1.png);
+        width: 100%;
+        height: 390px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: left;
+    }
+    .background-left{
+        position: relative;
+        left: 145px;
+        top: 60px;
+        color: #323842;
+    }
+    #center-1{
+        position: relative;
+    }
+
+    .title-1{
+        width: 100%;
+    }
+    .title-1 .button-left{
+            
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 235px;
+        height: 67px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6.67%;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 4px;
+    }
+    .title-1 .button-left:link,#title-1 .button-left:hover:visited{
+        background-color: none;
+        color:#459d7a;
+    }
+    .title-1 .button-left:hover,#title-1 .button-left:hover:active{
+        background-color: #459d7a;
+        color:#ecf5f1;
+    }
+    .title-1 .button-right{
+        float: right;
+        color: gray;
+    }
+    .title-1 .button-right#sort:link, #title-1 .button-right#sort:visited {
+        display: flex;text-decoration: none;height: 68px;background-color: #f3f4f6;width: 158px;justify-content: center;align-items: center;
+        color:#6f7681;
+        font-weight: 600;
+        font-size: x-large;
+    }
+    .title-1 .button-right#sort:hover, #title-1 .button-right#sort:active {
+        background-color: #d2d2d2;
+    }
+      
+    .title-1 .button-right#search{
+        display: flex;
+        height: 68px;
+        width: 310px;
+        border:none;
+        border-bottom: 2px solid #d7d9dd ;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 1.6%;
+    }
+    .title-1 .button-right#search input::placeholder{
+        font-size: 23px;
+    }
+    input::placeholder{
+        color: #e6e8ec;
+    }
+    .listProduct {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .product{
+        display: inline-block;
+        position: relative;
+        height: 500px;
+        width: 300px;
+    }
+    .notice{
+        position: absolute;
+        border: 1 solid #ffc970;
+        background-color: #ffc970;
+        border-radius: 20px;
+        right: 12px;
+        top: 0px;
+        font-size: 14px;
+        padding: 7px;
+        color: #97671a;
+    }
+    .money{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    footer{
+        display: flex;
+        width: 98.2%;
+        background-color: #1d2128;
+        height: 570px;
+        color: #d8dbe0;
+    }
+    footer .left{
+        margin: 7% 0 5% 10%;
+        display: flex;
+        width: 52%;
+    }
+    footer .right{
+        margin: 7% 10% 5% 0%;
+        display: flex;
+        width: 28%;
+    }
+        
+    .left .column{
+        width: 25%;
+    }
+    .left .column a{
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #d8dbe0;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .left .column .title{
+        font-size: 30px;
+        margin-bottom: 11.5px;
+    }
+    .right .column{
+        width: 100px;
+    }
+    .right #mail{
+        border: 2px solid #636771 ;
+        border-radius: 15px;
+        display: flex;
+        width: 560px;
+        height: 68px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .right #mail input::placeholder{
+        color:#adb1bb;
+        font-size: 21px;
+    }
+    .right #mail input[type ="button"]{
+        height: inherit;
+        width: 163px;
+        font-size: 25px;
+        border-radius: 0 15px 15px 0;
+        cursor: pointer;
+        background-color: #459d7a;
+        color:#ebf5f1;
+    }
+      
+
+
+</style>
+
+
+
+
+<body>
+<div id="menu-container">
+    <div id="left">
+        <div class="leftitem">Shop</div>
+        <div class="leftitem">Offer</div>
+        <div class="leftitem">Story</div>
+        <div class="leftitem">Blog</div>
+    </div>
+    <div id="center">
+        <img src="logo.png" alt="">
+    </div>
+    <div id="right">
+        <div class="rightitem">
+            <input type="text" placeholder="Search product... " >
+        </div>
+        <div> <img src="search.png" alt=""></div>
+        <div> <img src="Button 1.png" alt=""></div>
+    </div>     
+</div>   
+
+
+<div id="background">
+    <div class="background-left">
+        <h1 style="font-size: 60px;margin-bottom: 0;">Gift for your skin</h1>
+        <p style="display: inline-block;width: 500px;font-size: 22px;color: #646568;font-weight: 500;margin-top:10px">Aliquip fuglat ipsum nostrud ex et eu icididunt quis minim dolore excepteur voluptate</p>
+    </div>      
+</div>
+
+
+
+<div id="center-1">
+    <div class= "title-1">
+        <div style="display: flex;width: 60%;padding: 0;">
+            <a class="button-left">All Products</a>
+            <a class="button-left">Face</a>
+            <a class="button-left">Body</a>
+        </div>
+        <div style="position: absolute;top: 0px;right:0;display: inline-block;width: 900px;">
+            <a href="" class="button-right" id = "sort">Sort by <i class="fa-regular fa-bars-filter"></i>   </a>
+            <div class="button-right" id = "search">
+                <i class="fa-solid fa-magnifying-glass" style="color: #b0b1b2;font-size: 20px ;text-align: center;"></i>
+                <input type="text" size="27px" placeholder="Search product..." style="line-height: 28px;" >
+            </div>
+        </div>
+    </div>    
+</div>        
+  
+    
+
+
+<div id="listProduct">
+    <a href="">
+        <div class="product">
+            <img src="thuoc.png" alt="" width="100%" style="position: none;">
+            <p class="notice">Best-seller</p>
+            <h4 style="font-size: 20px;margin:12px 0;color:#3d4044">Product title</h4>
+            <p style="color: #3d4044;margin: 8px 0px;">Labore sint ipsum dolore molilit</p>
+            <div class="money">
+                <h4 style="display: inline-block; font-size: 30px;margin:0px 0px;color:#3d4044;width: fit-content;">$32</h4>
+                <p style=" display: inline-block; color: #afb2ba; width: fit-content;margin: 0px 10px;">$42</p>
+                <p style="margin: auto;"> <img src="Button 1 (3).png" alt=""></p>
+            </div>
+        </div>
+    </a>
+    <a href="">
+        <div class="product">
+            <img src="Image 1 (2).png" alt="" width="100%" style="position: none;">
+            <p class="notice">Best-seller</p>
+            <h4 style="font-size: 20px;margin:12px 0;color:#3d4044">Product title</h4>
+            <p style="color: #3d4044;margin: 8px 0px;">Labore sint ipsum dolore molilit</p>
+            <div class="money">
+                <h4 style="display: inline-block; font-size: 30px;margin:0px 0px;color:#3d4044;width: fit-content;">$32</h4>
+                <p style=" display: inline-block; color: #afb2ba; width: fit-content;margin: 0px 10px;">$42</p>
+                <p style="margin: auto;"> <img src="Button 1 (3).png" alt=""></p>
+            </div>
+        </div>
+    </a>
+    
+<footer>
+    <div class="left">
+        <div class="column">
+            <a class="title" href = "">About</a><br>
+            <a href="">Home</a><br>
+            <a href="">Shop</a><br>
+            <a href="">Our story</a><br>
+            <a href="">Blogs</a><br>
+            <select name="language" id="language" style="background-color: #1d2128;color:#e6e6e7;width: 170px;height: 50px;border:2px solid #e6e6e7;border-radius: 10px;">
+                <option value="US">English</option>
+            </select>
+        </div>
+    </div>  
+       
+   
+
+    <div class = "right">
+        <div>
+            <p style="font-size: 26px;font-weight: 700;margin: 0 0 20px 0;">Receive new promotions</p>
+                <p style="font-size: 20px;margin: 0 0 20px 0;">Duis ea tempor commodo amet reprehende</p>
+                <div id = "mail">
+                    <i class="fa-regular fa-envelope" style="margin:0 7px 0 20px;font-size: 21px;"></i>
+                    <input type="text" name="" id="" placeholder="Input your email" style="background-color: #1d2128;" size="50px">
+                    
+                    <input type="button" value="Subscribe" >
+                </div>   
+         </div>     
+    </div> 
+            
+</footer>            
+</body>
+</html>              
+         
+            
+       
+    
+
+    
